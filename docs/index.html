@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi Chaparrita</title>
+
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<div class="estrellas"></div>
+
+<audio autoplay loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<div id="inicio">
+
+<h1>Para mi Chaparrita</h1>
+
+<p>
+Hice esta página para ti.  
+Aquí guardé algunas cartas especiales que hablan de lo mucho que significas para mí.
+</p>
+
+<div id="contador"></div>
+
+<button onclick="entrar()">Entrar a las cartas</button>
+
+</div>
+
+<div id="cartas">
+
+<h2>Cartas Secretas 💌</h2>
+
+<button onclick="volverInicio()">⬅ Volver al inicio</button>
+
+<div class="grid">
+
+<div class="sobre" onclick="abrirCarta(1)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(2)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(3)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(4)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(5)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(6)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(7)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(8)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(9)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(10)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(11)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(12)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(13)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(14)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(15)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(16)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+<div class="sobre" onclick="abrirCarta(17)">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+</div>
+
+</div>
+
+<div id="ventanaCarta">
+    <button onclick="cerrarCarta()" class="cerrarCarta">❌ Cerrar carta</button>
+
+ <div id="contenidoCarta"></div>
+</div>
+
+</div>
+
+<div id="passwordBox">
+
+<div class="candado">
+
+<div class="icono">🔒</div>
+
+<h3>Introduce la contraseña</h3>
+
+<input type="password" id="passwordInput">
+
+<button onclick="verificar()">Abrir carta</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+<audio id="musica" loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="reproducir()">🎵 Activar música</button>
+</html> 
