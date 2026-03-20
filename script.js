@@ -1,23 +1,23 @@
 let cartaActual=0
 
 const passwords={
-1:"amor1",
-2:"amor2",
-3:"amor3",
-4:"amor4",
-5:"amor5",
-6:"amor6",
-7:"amor7",
-8:"amor8",
-9:"amor9",
-10:"amor10",
-11:"amor11",
-12:"amor12",
-13:"amor13",
-14:"amor14",
-15:"amor15",
-16:"amor16",
-17:"amor17"
+1:"teamo",
+2:"chaparrita",
+3:"princesa",
+4:"011022",
+5:"mimundo",
+6:"miamorcito",
+7:"mvdita",
+8:"3años",
+9:"familia",
+10:"130309",
+11:"once",
+12:"hermosa",
+13:"abrazarnos",
+14:"guadalupo",
+15:"ittakestwo",
+16:"vidajuntos",
+17:"siempreteamare"
 }
 
 function entrar(){
