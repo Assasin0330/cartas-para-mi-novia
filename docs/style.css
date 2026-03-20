@@ -174,3 +174,67 @@ background:#ff2e57;
 position:relative;
 
 }
+#flores{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#fff7ae,#ffd84d);
+overflow:hidden;
+}
+
+/* contenedor ramo */
+#ramo{
+position:relative;
+width:300px;
+height:300px;
+}
+
+/* flor */
+.flor{
+position:absolute;
+width:60px;
+height:60px;
+}
+
+/* pétalos */
+.petalo{
+position:absolute;
+width:20px;
+height:30px;
+background:yellow;
+border-radius:50%;
+}
+
+/* centro */
+.centro{
+position:absolute;
+width:20px;
+height:20px;
+background:#ff9900;
+border-radius:50%;
+top:20px;
+left:20px;
+}
+
+/* tallo */
+.tallo{
+position:absolute;
+width:5px;
+height:60px;
+background:green;
+top:60px;
+left:27px;
+}
+
+/* animación */
+.flor{
+animation:flotar 3s infinite ease-in-out;
+}
+
+@keyframes flotar{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}

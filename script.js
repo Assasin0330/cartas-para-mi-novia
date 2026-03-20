@@ -120,3 +120,66 @@ let audio = document.getElementById("musica")
 audio.play()
 
 }
+function crearFlor(x,y){
+
+let flor=document.createElement("div")
+flor.className="flor"
+flor.style.left=x+"px"
+flor.style.top=y+"px"
+
+/* pétalos */
+for(let i=0;i<5;i++){
+
+let petalo=document.createElement("div")
+petalo.className="petalo"
+
+let angulo=(i*72)*Math.PI/180
+petalo.style.left=20+Math.cos(angulo)*20+"px"
+petalo.style.top=20+Math.sin(angulo)*20+"px"
+
+flor.appendChild(petalo)
+}
+
+/* centro */
+let centro=document.createElement("div")
+centro.className="centro"
+flor.appendChild(centro)
+
+/* tallo */
+let tallo=document.createElement("div")
+tallo.className="tallo"
+flor.appendChild(tallo)
+
+return flor
+}
+
+function generarRamo(){
+
+let ramo=document.getElementById("ramo")
+
+ramo.innerHTML=""
+
+/* posiciones tipo ramo */
+let posiciones=[
+[120,40],
+[80,80],
+[160,80],
+[50,120],
+[130,130],
+[200,120]
+]
+
+posiciones.forEach(p=>{
+ramo.appendChild(crearFlor(p[0],p[1]))
+})
+
+}
+function irFlores(){
+
+document.getElementById("inicio").style.display="none"
+document.getElementById("cartas").style.display="none"
+document.getElementById("flores").style.display="flex"
+
+generarRamo()
+
+}
