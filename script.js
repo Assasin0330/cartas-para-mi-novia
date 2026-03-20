@@ -120,6 +120,15 @@ let audio = document.getElementById("musica")
 audio.play()
 
 }
+function irFlores(){
+
+document.getElementById("inicio").style.display="none"
+document.getElementById("cartas").style.display="none"
+document.getElementById("flores").style.display="flex"
+
+generarRamo()
+
+}
 function crearFlor(x,y){
 
 let flor=document.createElement("div")
