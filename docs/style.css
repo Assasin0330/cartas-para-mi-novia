@@ -269,7 +269,7 @@ pointer-events:none;
 z-index:0;
 }
 
-#inicio, #cartas, #flores{
+#inicio, #flores{
 position:relative;
 z-index:1;
 }
