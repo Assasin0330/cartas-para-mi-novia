@@ -8,20 +8,25 @@
 
 <title>Para mi Chaparrita</title>
 
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="estrellas"></div>
 
-<audio autoplay loop>
+<!-- Música principal -->
+<audio id="musica" loop>
 <source src="musica.mp3" type="audio/mpeg">
 </audio>
 
+<button onclick="reproducir()">🎵 Activar música</button>
+
+<!-- INICIO -->
 <div id="inicio">
 
-<h1>Para mi Chaparrita</h1>
+<h1>Para mi Chaparrita 💚</h1>
 
 <p>
 Hice esta página para ti.  
@@ -32,9 +37,14 @@ Aquí guardé algunas cartas especiales que hablan de lo mucho que significas pa
 
 <button onclick="entrar()">Entrar a las cartas</button>
 
+<br><br>
+
+<button onclick="irFlores()">🌼 Sorpresa especial</button>
+
 </div>
 
-<div id="cartas">
+<!-- CARTAS -->
+<div id="cartas" style="display:none">
 
 <h2>Cartas Secretas 💌</h2>
 
@@ -42,101 +52,39 @@ Aquí guardé algunas cartas especiales que hablan de lo mucho que significas pa
 
 <div class="grid">
 
-<div class="sobre" onclick="abrirCarta(1)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(2)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(3)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(4)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(5)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(6)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(7)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(8)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(9)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(10)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(11)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(12)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(13)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(14)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(15)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(16)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
-
-<div class="sobre" onclick="abrirCarta(17)">
-<div class="tapa"></div>
-<div class="cuerpo"></div>
-</div>
+<!-- 17 sobres -->
+<div class="sobre" onclick="abrirCarta(1)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(2)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(3)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(4)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(5)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(6)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(7)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(8)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(9)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(10)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(11)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(12)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(13)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(14)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(15)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(16)"><div class="tapa"></div><div class="cuerpo"></div></div>
+<div class="sobre" onclick="abrirCarta(17)"><div class="tapa"></div><div class="cuerpo"></div></div>
 
 </div>
 
+<!-- ventana carta -->
 <div id="ventanaCarta">
-    <button onclick="cerrarCarta()" class="cerrarCarta">❌ Cerrar carta</button>
 
- <div id="contenidoCarta"></div>
+<button onclick="cerrarCarta()" class="cerrarCarta">❌ Cerrar carta</button>
+
+<div id="contenidoCarta"></div>
+
 </div>
 
 </div>
 
+<!-- CONTRASEÑA -->
 <div id="passwordBox">
 
 <div class="candado">
@@ -147,47 +95,39 @@ Aquí guardé algunas cartas especiales que hablan de lo mucho que significas pa
 
 <input type="password" id="passwordInput">
 
+<br><br>
+
 <button onclick="verificar()">Abrir carta</button>
 
 </div>
 
 </div>
 
-<script src="script.js"></script>
-<button onclick="reproducir()">🎵 Activar música</button>
+<!-- SECCIÓN FLORES -->
 <div id="flores" style="display:none">
 
-<h1>Para ti mi chaparrita</h1>
-<button onclick="irFlores()">🌼 Sorpresa especial</button>
-<div id="flores" style="display:none">
-
-<h1>Para ti mi chaparrita</h1>
+<h1>Para ti mi chaparrita 💛</h1>
 
 <div id="ramo"></div>
 
 <p>
-Este ramo está hecho para ti, para que veas que no me olvide de este 21 mvd
+Este ramo está hecho para ti, para que veas que no me olvidé, de vdd espero te guste, 
+para que no te quedes sin tus flores amarillas te amo mucho 💛
 </p>
 
+<button onclick="toggleMusica2()">🎵 Música especial</button>
 
 <br><br>
 
 <button onclick="volverInicio()">⬅ Volver</button>
 
-
-</body>
-<audio id="musica" loop>
-<source src="musica.mp3" type="audio/mpeg">
-</audio>
-
-
 <audio id="musica2" loop>
 <source src="musica2.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="toggleMusica2()">🎵 Música especial</button>
-
-
 </div>
-</div>
-</html> 
+
+<script src="script.js"></script>
+
+</body>
+</html>
