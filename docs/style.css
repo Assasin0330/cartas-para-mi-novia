@@ -5,7 +5,8 @@ background:linear-gradient(135deg,#ff9a9e,#fecfef);
 text-align:center;
 overflow-x:hidden;
 }
-.algo{color: red;}
+
+/* fondo estrellas */
 .estrellas{
 position:fixed;
 width:100%;
@@ -23,6 +24,7 @@ from{transform:translateY(0)}
 to{transform:translateY(-1000px)}
 }
 
+/* INICIO */
 #inicio{
 height:100vh;
 display:flex;
@@ -31,6 +33,7 @@ justify-content:center;
 align-items:center;
 }
 
+/* BOTONES MEJORADOS */
 button{
 padding:12px 25px;
 font-size:18px;
@@ -39,8 +42,15 @@ border-radius:10px;
 background:#ff4d6d;
 color:white;
 cursor:pointer;
+transition:0.3s;
 }
 
+button:hover{
+background:#ff2e57;
+transform:scale(1.05);
+}
+
+/* GRID CARTAS */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
@@ -48,6 +58,7 @@ gap:20px;
 padding:30px;
 }
 
+/* SOBRE */
 .sobre{
 position:relative;
 width:120px;
@@ -79,6 +90,7 @@ transition:0.5s;
 transform:rotateX(180deg);
 }
 
+/* VENTANA CARTA */
 #ventanaCarta{
 display:none;
 background:white;
@@ -87,6 +99,23 @@ border-radius:15px;
 max-width:600px;
 margin:auto;
 margin-top:30px;
+position:relative;
+}
+
+.cerrarCarta{
+position:absolute;
+top:10px;
+right:10px;
+background:#ff4d6d;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.cerrarCarta:hover{
+background:#ff2e57;
 }
 
 img{
@@ -94,6 +123,7 @@ max-width:100%;
 border-radius:10px;
 }
 
+/* PASSWORD */
 #passwordBox{
 display:none;
 position:fixed;
@@ -129,6 +159,7 @@ from{transform:scale(0)}
 to{transform:scale(1)}
 }
 
+/* corazones */
 .corazon{
 position:fixed;
 bottom:-20px;
@@ -141,39 +172,11 @@ animation:subir 6s linear infinite;
 0%{transform:translateY(0)}
 100%{transform:translateY(-120vh)}
 }
-.cerrarCarta{
 
-position:absolute;
+/* ========================= */
+/* 🌼 SECCIÓN FLORES */
+/* ========================= */
 
-top:10px;
-
-right:10px;
-
-background:#ff4d6d;
-
-color:white;
-
-border:none;
-
-padding:8px 15px;
-
-border-radius:8px;
-
-cursor:pointer;
-
-}
-
-.cerrarCarta:hover{
-
-background:#ff2e57;
-
-}
-
-#ventanaCarta{
-
-position:relative;
-
-}
 #flores{
 height:100vh;
 display:flex;
@@ -181,60 +184,97 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 background:linear-gradient(135deg,#fff7ae,#ffd84d);
-overflow:hidden;
 }
 
-/* contenedor ramo */
+/* RAMO */
 #ramo{
 position:relative;
-width:300px;
-height:300px;
+width:350px;
+height:350px;
+margin-top:20px;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-/* flor */
+/* FLOR */
 .flor{
 position:absolute;
-width:60px;
-height:60px;
-}
-
-/* pétalos */
-.petalo{
-position:absolute;
-width:20px;
-height:30px;
-background:yellow;
-border-radius:50%;
-}
-
-/* centro */
-.centro{
-position:absolute;
-width:20px;
-height:20px;
-background:#ff9900;
-border-radius:50%;
-top:20px;
-left:20px;
-}
-
-/* tallo */
-.tallo{
-position:absolute;
-width:5px;
-height:60px;
-background:green;
-top:60px;
-left:27px;
-}
-
-/* animación */
-.flor{
+width:80px;
+height:80px;
 animation:flotar 3s infinite ease-in-out;
 }
 
+/* PÉTALOS */
+.petalo{
+position:absolute;
+width:25px;
+height:35px;
+background:linear-gradient(145deg,#ffe066,#ffd000);
+border-radius:50%;
+box-shadow:0 0 5px rgba(255,200,0,0.5);
+}
+
+/* CENTRO */
+.centro{
+position:absolute;
+width:25px;
+height:25px;
+background:radial-gradient(circle,#ff9900,#cc6600);
+border-radius:50%;
+top:28px;
+left:28px;
+}
+
+/* TALLO */
+.tallo{
+position:absolute;
+width:5px;
+height:80px;
+background:linear-gradient(green,#0a5f0a);
+top:70px;
+left:37px;
+}
+
+/* HOJAS */
+.hoja{
+position:absolute;
+width:20px;
+height:12px;
+background:green;
+border-radius:50%;
+}
+
+.hoja1{
+top:90px;
+left:20px;
+transform:rotate(-30deg);
+}
+
+.hoja2{
+top:110px;
+left:50px;
+transform:rotate(30deg);
+}
+
+/* ANIMACIÓN FLORES */
 @keyframes flotar{
 0%{transform:translateY(0)}
 50%{transform:translateY(-10px)}
 100%{transform:translateY(0)}
+}
+
+.estrellas{
+pointer-events:none;
+z-index:0;
+}
+
+#inicio, #cartas, #flores{
+position:relative;
+z-index:1;
+}
+
+button{
+position:relative;
+z-index:2;
 }
