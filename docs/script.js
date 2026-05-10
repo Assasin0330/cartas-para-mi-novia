@@ -221,3 +221,17 @@ ramo.appendChild(crearFlor(p[0],p[1]))
 })
 
 }
+
+/* ========================= */
+/* 💖 SECCIÓN MAMÁ */
+/* ========================= */
+
+function irMama(){
+
+document.getElementById("inicio").style.display="none"
+document.getElementById("cartas").style.display="none"
+document.getElementById("flores").style.display="none"
+
+document.getElementById("mama").style.display="flex"
+
+}
