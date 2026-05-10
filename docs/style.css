@@ -278,3 +278,33 @@ button{
 position:relative;
 z-index:2;
 }
+
+/* ========================= */
+/* 💖 SECCIÓN MAMÁ */
+/* ========================= */
+
+#mama{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd6e0,#fff0f5);
+padding:20px;
+}
+
+.contenedorMama{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+max-width:700px;
+}
+
+.imagenMama{
+width:100%;
+max-width:500px;
+border-radius:15px;
+margin:20px 0;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
